@@ -1,11 +1,13 @@
 //your parameter variables go here!
-let eyeX = 24;
-let eyeY = 45;
-let eyeSize = 3
-let beeSize = 59
-let wingSize = 15
+let rect_width = 20;
+let rect_height = 30;
 
-let size = 50;
+let midX = 100;
+let midY = 100;
+
+function setup() {
+  angleMode(DEGREES);
+}
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -21,38 +23,38 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(255, 255, 255); //light honeydew green colour
+  background(19, 13, 64);
+  noLoop(); // Stops draw loop after one frame
+
 }
 
-function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
- let isYellow = true;
+function my_symbol() {// do not rename this function. Treat this similarly to a Draw function
+ translate(width / 2, height / 2);
+ fill(255, 204, 0);
+ stroke(255);
+ strokeWeight(2);
+ drawStar(0, 0, 100, 40, 4);
+}
 
-   fill(245, 190, 93) // brown
-   
- if(beeSize < 60){
-  fill(250,228,87); // yellow
- }
 
-  ellipse(45, 50, beeSize, 45);
-  fill(188,226,227);
-  ellipse(43,20,wingSize,17);
-  ellipse(50,20,wingSize,17);
-  fill(0,0,0);
-  triangle(75, 48, 85, 52, 75,55);
+function drawStar(x, y, radius1, radius2, npoints) {
+  let angle = TWO_PI / npoints;
+  let halfAngle = angle / 2.0;
 
   beginShape();
-  vertex(32, 30);
-  vertex(42, 28.5);
-  vertex(42,72);
-  vertex(32,70);
+  for (let a = 0; a < TWO_PI; a += angle){
+    // outer point
+    let sx = x + cos(a) * radius1;
+    let sy = y + sin(a) * radius1;
+    vertex(sx, sy);
+    // inner point
+    sx = x + cos(a + halfAngle) * radius2;
+    sy + y + sin(a + halfAngle) * radius2;
+    vertex(sx, sy);
+  }
   endShape(CLOSE);
+}
 
-  beginShape()
-  vertex(53,29);
-  vertex(62,31.5);
-  vertex(62, 68);
-  vertex(53,71)
-  endShape(CLOSE);
-
-  circle( eyeX , eyeY, eyeSize);
+function draw() {
+  
 }
