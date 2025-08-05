@@ -7,16 +7,16 @@ let midY = 100;
 
 //petal size
 let petalLength = 60;
-let petalWidth = 25;
-let numPetals = 8;
+let petalWidth = 30;
+let numPetals = 6;
 
 //circle size
 let centreX = 0;
 let centreY = 0;
-let centreDiameter = 35;
+let centreDiameter = 40;
 
 //square size
-let squareSize = 65;
+let squareSize = 50;
 
 //corner positions
 let corners = [
@@ -26,24 +26,36 @@ let corners = [
   [-100, 100], // bottom-left
 ];
 
-y = 12;
+let myOption = 3;
+
+y = 15;
+
+z = 12;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
-  //pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   
-  pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.resolution(A3);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 function wallpaper_background() {
-  background(242, 241, 211); // cream colour
-
+  if (myOption === 1) {
+    background(242, 236, 184); // cream
+  } else if (myOption === 2) {
+    background(205, 242, 184); // mint green
+  } else if (myOption === 3) {
+    background(219, 134, 147); // rose
+  }
+  else {
+      background(212, 186, 232); // lilac
+  }
 }
 
 function my_symbol() {// do not rename this function. Treat this similarly to a Draw function
@@ -66,12 +78,16 @@ function my_symbol() {// do not rename this function. Treat this similarly to a 
       }
 
     // centre circle
-    let centreColour = color(139, 179, 178); // hazy light blue
-    fill(centreColour);
+    let centreColour1 = color(139, 179, 178); // hazy light blue
+    let centreColour2 = color(227, 143, 202);
+    if (z < 10) {
+      fill(centreColour1);
+    } else {
+      fill(centreColour2);
+    }
     circle(centreX, centreY, centreDiameter);
 
     // squares in corner
-    fill(centreColour);
     noStroke();
 
     for (let[x, y] of corners) {

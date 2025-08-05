@@ -10,23 +10,50 @@ Your final settings.txt will look something like this when you are finished:
 Wallpaper 1:
 
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+let rect_width = 20;
+let rect_height = 30;
+
+let midX = 100;
+let midY = 100;
+
+//petal size
+let petalLength = 60;
+let petalWidth = 25;
+let numPetals = 8;
+
+//circle size
+let centreX = 0;
+let centreY = 0;
+let centreDiameter = 35;
+
+//square size
+let squareSize = 65;
+
+//corner positions
+let corners = [
+  [-100, -100], // top-left
+  [100, -100], // top-right
+  [100, 100], //bottom-right
+  [-100, 100], // bottom-left
+];
+
+let myOption = 1;
+
+y = 12;
+
+z = 9;
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
+  //pWallpaper.output_mode(GRID_WALLPAPER);
+  
   pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.show_guide(flase); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 /////////////////////////////////
@@ -34,21 +61,405 @@ function setup_wallpaper(pWallpaper) {
 Wallpaper 2:
 
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let rect_width = 20;
+let rect_height = 30;
+
+let midX = 100;
+let midY = 100;
+
+//petal size
+let petalLength = 80;
+let petalWidth = 45;
+let numPetals = 5;
+
+//circle size
+let centreX = 0;
+let centreY = 0;
+let centreDiameter = 35;
+
+//square size
+let squareSize = 80;
+
+//corner positions
+let corners = [
+  [-100, -100], // top-left
+  [100, -100], // top-right
+  [100, 100], //bottom-right
+  [-100, 100], // bottom-left
+];
+
+let myOption = 2;
+
+y = 16;
+
+z = 11;
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
+  //pWallpaper.output_mode(GRID_WALLPAPER);
+  
   pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.show_guide(flase); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 3:
+
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 30;
+
+let midX = 100;
+let midY = 100;
+
+//petal size
+let petalLength = 50;
+let petalWidth = 30;
+let numPetals = 12;
+
+//circle size
+let centreX = 0;
+let centreY = 0;
+let centreDiameter = 55;
+
+//square size
+let squareSize = 25;
+
+//corner positions
+let corners = [
+  [-100, -100], // top-left
+  [100, -100], // top-right
+  [100, 100], //bottom-right
+  [-100, 100], // bottom-left
+];
+
+let myOption = 1;
+
+y = 17;
+
+z = 9;
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(DEVELOP_GLYPH);
+  //pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(flase); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 4:
+
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 30;
+
+let midX = 100;
+let midY = 100;
+
+//petal size
+let petalLength = 32;
+let petalWidth = 30;
+let numPetals = 7;
+
+//circle size
+let centreX = 0;
+let centreY = 0;
+let centreDiameter = 45;
+
+//square size
+let squareSize = 76;
+
+//corner positions
+let corners = [
+  [-100, -100], // top-left
+  [100, -100], // top-right
+  [100, 100], //bottom-right
+  [-100, 100], // bottom-left
+];
+
+let myOption = 4;
+
+y = 12;
+
+z = 12;
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(DEVELOP_GLYPH);
+  //pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(flase); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 5:
+
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 30;
+
+let midX = 100;
+let midY = 100;
+
+//petal size
+let petalLength = 80;
+let petalWidth = 30;
+let numPetals = 18;
+
+//circle size
+let centreX = 0;
+let centreY = 0;
+let centreDiameter = 25;
+
+//square size
+let squareSize = 34;
+
+//corner positions
+let corners = [
+  [-100, -100], // top-left
+  [100, -100], // top-right
+  [100, 100], //bottom-right
+  [-100, 100], // bottom-left
+];
+
+let myOption = 2;
+
+y = 12;
+
+z = 12;
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(DEVELOP_GLYPH);
+  //pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(flase); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 6:
+
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 30;
+
+let midX = 100;
+let midY = 100;
+
+//petal size
+let petalLength = 60;
+let petalWidth = 30;
+let numPetals = 6;
+
+//circle size
+let centreX = 0;
+let centreY = 0;
+let centreDiameter = 40;
+
+//square size
+let squareSize = 50;
+
+//corner positions
+let corners = [
+  [-100, -100], // top-left
+  [100, -100], // top-right
+  [100, 100], //bottom-right
+  [-100, 100], // bottom-left
+];
+
+let myOption = 3;
+
+y = 15;
+
+z = 12;
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(DEVELOP_GLYPH);
+  //pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(flase); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 7:
+
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 30;
+
+let midX = 100;
+let midY = 100;
+
+//petal size
+let petalLength = 60;
+let petalWidth = 40;
+let numPetals = 14;
+
+//circle size
+let centreX = 0;
+let centreY = 0;
+let centreDiameter = 70;
+
+//square size
+let squareSize = 50;
+
+//corner positions
+let corners = [
+  [-100, -100], // top-left
+  [100, -100], // top-right
+  [100, 100], //bottom-right
+  [-100, 100], // bottom-left
+];
+
+let myOption = 2;
+
+y = 15;
+
+z = 4;
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(DEVELOP_GLYPH);
+  //pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(flase); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 8:
+
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 30;
+
+let midX = 100;
+let midY = 100;
+
+//petal size
+let petalLength = 70;
+let petalWidth = 15;
+let numPetals = 20;
+
+//circle size
+let centreX = 0;
+let centreY = 0;
+let centreDiameter = 40;
+
+//square size
+let squareSize = 85;
+
+//corner positions
+let corners = [
+  [-100, -100], // top-left
+  [100, -100], // top-right
+  [100, 100], //bottom-right
+  [-100, 100], // bottom-left
+];
+
+let myOption = 1;
+
+y = 12;
+
+z = 12;
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(DEVELOP_GLYPH);
+  //pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(flase); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 9:
+
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 30;
+
+let midX = 100;
+let midY = 100;
+
+//petal size
+let petalLength = 50;
+let petalWidth = 40;
+let numPetals = 2;
+
+//circle size
+let centreX = 0;
+let centreY = 0;
+let centreDiameter = 40;
+
+//square size
+let squareSize = 85;
+
+//corner positions
+let corners = [
+  [-100, -100], // top-left
+  [100, -100], // top-right
+  [100, 100], //bottom-right
+  [-100, 100], // bottom-left
+];
+
+let myOption = 3;
+
+y = 12;
+
+z = 5;
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(DEVELOP_GLYPH);
+  //pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(flase); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 0;
 }
