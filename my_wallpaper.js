@@ -5,9 +5,28 @@ let rect_height = 30;
 let midX = 100;
 let midY = 100;
 
-function setup() {
-  angleMode(DEGREES);
-}
+//petal size
+let petalLength = 60;
+let petalWidth = 25;
+let numPetals = 8;
+
+//circle size
+let centreX = 0;
+let centreY = 0;
+let centreDiameter = 35;
+
+//square size
+let squareSize = 65;
+
+//corner positions
+let corners = [
+  [-100, -100], // top-left
+  [100, -100], // top-right
+  [100, 100], //bottom-right
+  [-100, 100], // bottom-left
+];
+
+y = 12;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -23,38 +42,47 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(19, 13, 64);
-  noLoop(); // Stops draw loop after one frame
+  background(242, 241, 211); // cream colour
 
 }
 
 function my_symbol() {// do not rename this function. Treat this similarly to a Draw function
- translate(width / 2, height / 2);
- fill(255, 204, 0);
- stroke(255);
- strokeWeight(2);
- drawStar(0, 0, 100, 40, 4);
+  push();
+    translate(midX, midY);
+
+    noStroke();
+      for (let i = 0; i < numPetals; i++) {
+        push();
+        let petalColour1 = color(180, 219, 219); // light blue
+        let petalColour2 = color(255, 182, 193); // soft pink
+        rotate((360 / numPetals) * i);
+        if (y < 15) {
+          fill(petalColour1);
+        } else {
+          fill(petalColour2);
+        }
+        ellipse(0, -petalLength / 2, petalWidth, petalLength); // draws the top petal
+        pop();
+      }
+
+    // centre circle
+    let centreColour = color(139, 179, 178); // hazy light blue
+    fill(centreColour);
+    circle(centreX, centreY, centreDiameter);
+
+    // squares in corner
+    fill(centreColour);
+    noStroke();
+
+    for (let[x, y] of corners) {
+      push();
+      translate(x, y); // move to corner
+      rotate(45); // rotates 45 degrees
+      rectMode(CENTER);
+      rect(0, 0, squareSize, squareSize);
+      pop();
+    }
+
+  pop();
 }
 
-
-function drawStar(x, y, radius1, radius2, npoints) {
-  let angle = TWO_PI / npoints;
-  let halfAngle = angle / 2.0;
-
-  beginShape();
-  for (let a = 0; a < TWO_PI; a += angle){
-    // outer point
-    let sx = x + cos(a) * radius1;
-    let sy = y + sin(a) * radius1;
-    vertex(sx, sy);
-    // inner point
-    sx = x + cos(a + halfAngle) * radius2;
-    sy + y + sin(a + halfAngle) * radius2;
-    vertex(sx, sy);
-  }
-  endShape(CLOSE);
-}
-
-function draw() {
-  
-}
